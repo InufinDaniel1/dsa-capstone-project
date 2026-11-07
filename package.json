@@ -1,13 +1,19 @@
 {
-  "name": "dsa-2026-capstone-project-2",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "ticketing-capstone",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Event Ticketing and Booking - course capstone, built one milestone per Build session",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module"
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/server.js",
+    "test": "node --disable-warning=ExperimentalWarning --test --test-reporter=spec",
+    "demo": "node scripts/demo.js",
+    "benchmark": "node scripts/benchmark-lookup.js",
+    "export:openapi": "node scripts/export-openapi.js",
+    "seed": "node --disable-warning=ExperimentalWarning scripts/seed.js",
+    "oversell": "node --disable-warning=ExperimentalWarning scripts/oversell-demo.js"
+  }
 }
